@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Libertinus+Keyboard&family=Orbitron:wght@400..900&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Sigmar&display=swap');
+
+@font-face {
+  font-family: digital-clock; 
+  src: url(../font/digital-7.ttf); 
+}
+
+:root {
+  --black: #09080D;
+  --red: #BF0413;
+  --claret: #F4ECCF; 
+  --orange: #F2C029;
+  --green: #4caf50;
+  --pause: #f44336;
+}
+
+body {
+  background-color: var(--black);
+}
+
+h1 {
+  font-family: digital-clock, sans-serif;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  color: var(--claret);
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  border-radius: 5px;
+  border: 0;
+  font-size: 2.5rem;
+  font-family: digital-clock, sans-serif;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin: 10px 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.start {
+  background-color: var(--green);
+}
+
+.pause {
+  background-color: var(--orange);
+}
+
+.restart {
+  background-color: var(--pause);
+}
+
+.clock {
+  font-family: digital-clock, sans-serif;
+  font-size: 10em;
+  color: var(--orange);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+}
+
+.stoped {
+  color: var(--red);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 550px){
+  .clock {
+    font-size: 5em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
