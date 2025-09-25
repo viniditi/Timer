@@ -23,6 +23,7 @@ function clock() {
 
     start.addEventListener('click', function() {
         clock.classList.remove('stoped');
+        start.innerText = 'START'
         clearInterval(timer);
         startClock();
     });
@@ -30,12 +31,14 @@ function clock() {
     pause.addEventListener('click', function() {
         clock.classList.add('stoped')
         setTimeout(function(){
+            start.innerText = 'CONTINUE'
             clearInterval(timer);
         });
     });
 
     restart.addEventListener('click', function() {
         clearInterval(timer);
+        start.innerText = 'START'
         clock.classList.remove('stoped');
         seconds = 0;
         clock.innerHTML = "00:00:00";
